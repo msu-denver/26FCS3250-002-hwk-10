@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block main %}
+        <h1>Mortgage Calculator</h1>
+        <form action="" method="POST" novalidate>
+            {{ form.hidden_tag() }}
+            <p>{{ form.price.label }} {{ form.price(size=10) }}</p>
+            <p>{{ form.down_payment.label }} {{ form.down_payment(size=10) }}</p>
+            <p>{{ form.rate.label }} {{ form.rate(size=5) }}</p>
+            <p>{{ form.years.label }} {{ form.years(size=5) }}</p>
+            <p>{{ form.submit() }}</p>
+        </form>
+        {% if error %}
+            <p id="error" class="error">{{ error }}</p>
+        {% endif %}
+{% endblock %}

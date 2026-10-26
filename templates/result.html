@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block main %}
+        <h1>Mortgage Calculator</h1>
+        <p>Loan amount: <span id="principal">{{ principal }}</span></p>
+        <p>Estimated monthly payment: <span id="payment">{{ payment }}</span></p>
+        <p><a href="{{ url_for('index') }}">New estimate</a></p>
+{% endblock %}
