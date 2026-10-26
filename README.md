@@ -32,7 +32,7 @@ Run these commands from the root of the repository (the app looks for `templates
 
 Treat the app as a black box: your tests must interact with it **only through the browser** (using Selenium), never by importing or calling the app's code.
 
-Finish the six test cases in [tests/MortgageTest.py](tests/MortgageTest.py) according to the pre- and post-conditions. Each test should:
+The first test case (`testThirtyYearLoan`) is already implemented for you as an example. Finish the remaining five test cases in [tests/MortgageTest.py](tests/MortgageTest.py) according to the pre- and post-conditions. Each test should:
 
 1. fill in the form fields with the values given in the pre-condition;
 2. click the `submit` button;

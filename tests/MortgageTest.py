@@ -22,8 +22,19 @@ class MortgageTest(unittest.TestCase):
     # pre-condition: price=300000, down_payment=60000, rate=6.5, years=30
     # post-condition: monthly payment is displayed as $1,516.96
     def testThirtyYearLoan(self):
-        # TODO: fill in the form with the pre-condition values, click submit, and assert the post-condition
-        raise ValueError()
+        price = self.browser.find_element(By.ID, 'price')
+        price.send_keys('300000')
+        down_payment = self.browser.find_element(By.ID, 'down_payment')
+        down_payment.send_keys('60000')
+        rate = self.browser.find_element(By.ID, 'rate')
+        rate.send_keys('6.5')
+        years = self.browser.find_element(By.ID, 'years')
+        years.send_keys('30')
+        submit = self.browser.find_element(By.ID, 'submit')
+        submit.click()
+        time.sleep(1)
+        payment = self.browser.find_element(By.ID, 'payment')
+        self.assertEqual('$1,516.96', payment.text)
 
     # pre-condition: price=300000, down_payment=60000, rate=6.5, years=15
     # post-condition: monthly payment is displayed as $2,090.66
